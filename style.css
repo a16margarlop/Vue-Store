@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+/* -------------------------------------------------------------------------- */
+/*                               DEFAULT STYLES                               */
+/* -------------------------------------------------------------------------- */
+:root {
+  --color_background: #171717;
+  --color-principal: rgb(255, 176, 29);
+  --color-secundary: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background-color: var(--color_background);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   LANDING                                  */
+/* -------------------------------------------------------------------------- */
+.portada {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.portada__title {
+  font-size: 40px;
+  color: var(--color-secundary);
+}
+
+.portada__description {
+  background: #cfb11d;
+  background: linear-gradient(to right, #cfb11d 0%, #cf4217 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* ---------------------------------- BOTON --------------------------------- */
+.cssbuttons-io-button {
+  background: #ffb01d;
+  color: black;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #ffb01d;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  margin: 40px auto;
+}
+
+.cssbuttons-io-button .icon {
+  background: black;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #ffb01d;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #ffb01d;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    ITEMS                                   */
+/* -------------------------------------------------------------------------- */
+/* --------------------------------- header --------------------------------- */
+.header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 4px solid #ffb01d;
+  margin: 2% auto 0 auto;
+  position: relative;
+}
+.catalogo__title {
+  width: 100%;
+  font-size: 40px;
+  color: var(--color-secundary);
+  text-align: center;
+}
+
+.cart__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 30px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.cart-icon {
+  fill: white;
+}
+.circle{
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-bottom: 10px;
+  background-color: var(--color-principal);
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* ---------------------------------- body ---------------------------------- */
+.coche__container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  margin: 20px auto;
+}
+
+.coche-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-secundary);
+  padding: 10px;
+  box-shadow: 3px 3px 5px;
+  border-radius: 5px;
+}
+
+.coche__name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+
+.coche__price {
+  font-family: "Oswald", sans-serif;
+}
+
+.coche__btn {
+  margin-top: 20px;
+  background-color: var(--color-principal);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.coche__btn:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.coche__btn:hover > svg {
+  fill: white;
+}
+
+.coche__btn-cart {
+  width: 16px;
+  height: auto;
+  margin-left: 5px;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.coche__img {
+  width: 50%;
+  height: auto;
+}
+
+/* ---------------------------------- BOTON --------------------------------- */
+.Btn {
+  --night-rider: #2e2e2e;
+  --af-white: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: var(--af-white);
+  margin: 10px auto 0 auto;
+}
+.Btn:hover {
+  opacity: 0.7;
+}
+/* plus sign */
+.sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+.sign svg {
+  width: 15px;
+}
+
+.sign svg path {
+  fill: var(--night-rider);
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--night-rider);
+  font-size: 1.1em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+  opacity: 1;
+  width: 55%;
+  padding-right: 10px;
+  transition-duration: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CARRITO                                  */
+/* -------------------------------------------------------------------------- */
+.carrito {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(112, 112, 112);
+  width: 30%;
+  margin: 10px auto;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+.carrito__products {
+  display: flex;
+  justify-content: space-between;
+}
+.precioCarrito {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-principal);
+  letter-spacing: 1px;
+}
+.carrito__delete-btn {
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  background: none;
+  border: none;
+  transition: all 0.3 ease-in-out;
+}
+.carrito__delete-btn:hover {
+  color: var(--color-principal);
+}
+/* -------------------------------------------------------------------------- */
+/*                                  CHECKOUT                                  */
+/* -------------------------------------------------------------------------- */
+.checkout{
+  width: 90%;
+  margin: 0 auto;
+}
+.checkout__title{
+  width: 100%;
+  font-size: 40px;
+  color: var(--color-secundary);
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--color-principal);
+  margin-top: 40px;
+}
+.checkout__products{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  color: white;
+}
